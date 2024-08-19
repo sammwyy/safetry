@@ -1,0 +1,60 @@
+{
+  "name": "safetry",
+  "author": "sammwy",
+  "description": "Safe and structured error handling for JavaScript.",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.(js|ts)\"",
+    "lint": "eslint src --ext .js,.ts",
+    "lint:fix": "eslint src --fix --ext .js,.ts",
+    "test": "jest --config jest.config.js",
+    "prepare": "husky install && yarn build",
+    "prepublishOnly": "yarn test && yarn lint",
+    "preversion": "yarn lint",
+    "version": "yarn format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint && yarn test"
+    }
+  },
+  "module": "lib/index.esm.js",
+  "devDependencies": {
+    "@types/jest": "29.5.12",
+    "@typescript-eslint/eslint-plugin": "^8.2.0",
+    "@typescript-eslint/parser": "^8.2.0",
+    "eslint": "^9.9.0",
+    "eslint-plugin-jest": "^28.8.0",
+    "husky": "^9.1.4",
+    "jest": "^29.7.0",
+    "prettier": "3.3.3",
+    "ts-jest": "^29.2.4",
+    "typescript": "^5.5.4"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sammwyy/safetry.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sammwyy/safetry/issues"
+  },
+  "keywords": [
+    "safetry",
+    "try",
+    "try-catch",
+    "error",
+    "error-handling"
+  ]
+}
