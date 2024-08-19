@@ -1,4 +1,4 @@
-# 🔒 Safetry
+# 🔒 Safe Try Catch
 
 Safe and structured error handling for JavaScript.
 
@@ -15,16 +15,16 @@ Safe and structured error handling for JavaScript.
 
 ```bash
 # Using npm
-npm install safetry
+npm install safe-try-catch
 
 # Using yarn
-yarn add safetry
+yarn add safe-try-catch
 
 # Using pnpm
-pnpm add safetry
+pnpm add safe-try-catch
 
 # Using bun
-bun add safetry
+bun add safe-try-catch
 ```
 
 ## 📋 Usage
@@ -34,7 +34,7 @@ bun add safetry
 Wraps synchronous or asynchronous functions with safe error handling.
 
 ```ts
-import { safeTry } from 'safetry';
+import { safeTry } from 'safe-try-catch';
 
 const [result, error] = safeTry(() => {
   throw new Error("This is an error");
@@ -46,7 +46,7 @@ const [result, error] = safeTry(() => {
 Wraps a function to handle errors safely, and can be used with both synchronous and asynchronous functions.
 
 ```ts
-import { wrapTry } from 'safetry';
+import { wrapTry } from 'safe-try-catch';
 
 // Unsafe synchronous function
 function unsafeSyncAction(value: string): string {

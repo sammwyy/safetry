@@ -1,5 +1,5 @@
 {
-  "name": "safetry",
+  "name": "safe-try-catch",
   "author": "sammwy",
   "description": "Safe and structured error handling for JavaScript.",
   "version": "0.1.0",
@@ -13,8 +13,8 @@
   "scripts": {
     "build": "tsc",
     "format": "prettier --write \"src/**/*.(js|ts)\"",
-    "lint": "eslint src --ext .js,.ts",
-    "lint:fix": "eslint src --fix --ext .js,.ts",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
     "test": "jest --config jest.config.js",
     "prepare": "husky install && yarn build",
     "prepublishOnly": "yarn test && yarn lint",
